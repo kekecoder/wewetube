@@ -5,23 +5,23 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Two factor Challenge') }}</div>
+                <div class="card-header">{{ __('Confirm Password') }}</div>
 
                 <div class="card-body">
                     <p class="text-center">
-                        {{ __('Please enter your authentication code to login.') }}
+                        {{ __('Please confirm your password before continuing.') }}
                     </p>
 
-                    <form method="POST" action="{{ route('two-factor.login') }}">
+                    <form method="POST" action="{{ route('password.confirm') }}">
                         @csrf
 
                         <div class="form-group row">
-                            <label for="code" class="col-md-4 col-form-label text-md-right">{{ __('Enter Generated Code Here:') }}</label>
+                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
 
                             <div class="col-md-6">
-                                <input id="code" type="code" class="form-control @error('code') is-invalid @enderror" name="code" required autocomplete="current-code">
+                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
 
-                                @error('code')
+                                @error('password')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -32,7 +32,7 @@
                         <div class="mb-0 form-group row">
                             <div class="col-md-8 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
-                                    {{ __('Submit') }}
+                                    {{ __('Confirm Password') }}
                                 </button>
                             </div>
                         </div>

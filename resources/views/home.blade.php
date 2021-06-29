@@ -8,14 +8,14 @@
                 <div class="card-header">{{ __('Two Factor Authentication') }}</div>
 
                 <div class="card-body">
-                    @if (session('status') == 'two-factor-auntentication-disabled')
+                    @if (session('status') == "two-factor-auntentication-disabled")
                         <div class="alert alert-danger" role="alert">
                             Two Factor authentication has been disabled
                         </div>
                     @endif
 
                     <div class="card-body">
-                        @if (session('status') == 'two-factor-auntentication-enabled')
+                        @if (session('status') == "two-factor-auntentication-enabled")
                             <div class="alert alert-success" role="alert">
                                 Two Factor authentication has been enabled
                             </div>
